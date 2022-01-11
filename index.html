@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="shortcut icon"
+      href="./images/logo_for-porfolio.svg"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400&family=Josefin+Sans&display=swap" rel="stylesheet"> 
+  </head>
+
+  <body>
+    <div class="container">
+
+        <!-- navbar -->
+      <nav class="nav" id="nav">
+          <!-- Section of navbar inheading and logo --> 
+        <div class="nav__left-container">
+            <!-- images and heading in left section of navbar -->
+          <img
+            src="./images/logo_for-porfolio.svg"
+            alt="logo"
+            class="nav__lft-container--img"
+          />
+          <h2 class="nav__left-container--title">Webi.folio</h2>
+        </div>
+
+        <!--  section of navbar  for mobile section -->
+        <div class="nav__center-container cut" id="menu">
+            <!-- making menu for mobile app -->
+          <div class="nav__center-container-line  nav__center-container--line1"></div>
+          <div class="nav__center-container-line nav__center-container--line2"></div>
+          <div class="nav__center-container-line nav__center-container--line3"></div>
+        </div>
+        
+        <!-- section of navbar for links  -->
+        <div class="nav__rght-container" id="nav__right-container">
+            <!-- pages in website -->
+            <a href="#aboutpage" class="nav__rght-container--about nav-link">About</a>
+            <a href="#" class="nav__rght-container--work nav-link">Work</a>
+            <a href="#" class="nav__rght-container--contact nav-link">Contact</a>
+            <!-- toggle button for changing color of website -->
+            <div class="nav__rght-container__change">
+                <input type="checkbox" id="checkbox" name="checkbox">
+                <label for="checkbox" class="label" id="label">
+                    <div class="nav__change--ball" id="ball"></div>
+                </label>
+            </div>
+        </div>
+      </nav>
+
+      <!-- main-section -->
+      <main class="main">
+        <div class="main__container">
+
+          <!-- title on home page  -->
+          <div class="main__text-content">
+            <div class="main__heading">
+              <h1 class="main__heading-title main__heading--design">Designer</h1>
+              <h1 class="main__heading-title main__heading--and">&</h1>
+              <h1 class="main__heading-title main__heading--devloper">Front-End Devloper</h1>
+            </div>
+  
+            <!-- content of the main page -->
+            <div class="main__content">
+              <p class="main__content--para">I design and code beautifully simple things, and I love what I do.</p>
+            </div>
+          </div>
+
+          <!-- boy pic  -->
+          <div class="main__avtar">
+            <img src="./images/boy.svg" alt="" class="main__avtar-boy">
+          </div>
+
+          <!-- screen pics -->
+          <div class="main__hero">
+            <img src="./images/hero.svg" alt="" class="main__hero-setup">
+          </div>
+        </div>
+
+        <!-- About Section  -->
+        <section class="about" id="aboutpage">
+          <!-- container of about section -->
+          <div class="about__container">
+
+            <!-- telling the user for about section  -->
+
+            <h1 class="about__container--about about-heading">About</h1>
+
+            <!-- container for all information about my self -->
+
+            <div class="about__container-content" id="about">
+
+              <!-- here!! my name -->
+
+              <h3 class="about__container-content--title">Hi, I'm <span class="about__container-content--title--name">Yogesh</span>. Nice to <span class="about__container-content--title--meet">meet</span> you</h3>
+              
+              <!-- here is some para for what I do all the information about my self -->
+
+              <p class="about__container-content--para">Since beginning my journey as a Web designer 2 year ago, <br> I've done some small projects. I do a lot of things but <br> I specialize in branding and design website. I'm ready <br> to design your projects.</p>
+
+            </div>
+
+          </div>
+
+          <!-- section about my capabilties -->
+
+          <div class="capa">
+            <!-- heading of capabilty -->
+            <h1 class="capa--heading about-heading">Capabilites</h1>
+            
+            <!-- content of text -->
+            <div class="capa__container" id="capa">
+              <!-- image of system -->
+              <div class="capa__container-img">
+                <img src="./images/undraw_real_time_sync_re_nky7 1.svg" alt="" class="capa__container-img--system">
+              </div>
+              <!-- text -->
+              <div class="capa__content">
+                <!-- heading -->
+                <h2 class="capa__content--design">Web Design</h2>
+
+                <!-- titite para -->
+
+                <h3 class="capa__content--heading">Uncovering hidden problems and solving  them in <br> beautiful way with web design</h3>
+
+                <!-- para for work -->
+
+                <p class="capa__content--work capa__content-para">I work closely with each client establis what your goals <br> and values are as a brand, what you want your <br> business to achive and where you fit in your industry.</p>
+
+                <!-- para for goal -->
+
+                <p class="capa__content--goal capa__content-para">Whether your goal is to increase sign ups, duration on <br> your site or promote a practicular parts of your <br> business,Ican help as a freelance web design.</p>
+
+                <!-- list of what type of work i do  -->
+
+                <div class="capa__list">
+
+                  <!-- website list  -->
+
+                  <div class="capa__list-type capa__list--website">
+                    <div class="capa__list-cicle capa__list-cicle--green"></div>
+                    <p class="capa__list--work capa__list-text">Website design</p>
+                 </div>
+
+                  <!-- landing list -->
+
+                  <div class="capa__list-type capa__list--landing">
+                   <div class="capa__list-cicle capa__list-cicle--purple"></div>
+                    <p class="capa__list-landing capa__list-text">Landing page</p>
+                  </div>
+
+                  <!-- UI Design -->
+
+                  <div class="capa__list-type capa__list--ui">
+                    <div class="capa__list-cicle capa__list-cicle--green"></div>
+                   <p class="capa__list-ui capa__list-text">UI Design</p>
+                 </div>
+
+                 <!-- UX Design -->
+
+                 <div class="capa__list-type capa__list--ux">
+                   <div class="capa__list-cicle capa__list-cicle--purple"></div>
+                   <p class="capa__list-ux capa__list-text">Ux Design</p>
+                 </div>
+                
+                </div>
+              </div>
+            </div>
+            
+          </div>
+        </section>
+      </main>
+    </div>
+    <script src="./app.js"></script>
+  </body>
+</html>
