@@ -41,9 +41,10 @@ body.change{
 body.change a{
     color: black;
 }
-// body.change .nav{
-//     background-color: white;
-// }
+body.change .work{
+    background-color: black;
+    color: white;
+}
 @media screen and (max-width:900px){
     body.change .nav__rght-container{
     background-color: rgb(241, 241, 240);
@@ -216,7 +217,7 @@ a{
 // main section
 .main{
     grid-area: main;
-    @include flex(flex, center, center);
+    display: flex;
     flex-direction: column;
 }
 
@@ -227,7 +228,7 @@ a{
     flex-direction:column;
     height: 93vh;
     text-align: center;
-    margin:0 0 10rem 0;
+    margin:0 0 5rem 0;
 
     @media screen and (min-width:900px) {
         height: 90vh;
@@ -312,17 +313,16 @@ a{
 // about sectiion
 
 .about{
-    @include flex(flex, space-around, center);
+    @include flex(flex, center, start);
     flex-direction:column;
     // height: 100vh;
     text-align: start;
-    margin: 4rem 1rem;
+    margin: 1rem 1rem;
     
     @media screen and (min-width:900px) {
-        width: 1300px;
-        margin: 10rem 0;
-        height: 100vh;
+        width: 99vw;
         margin: 15rem 0;
+        align-items: center;
     }
 
     // about container
@@ -338,7 +338,7 @@ a{
         @media screen and (min-width:900px) {
             gap: 3rem;
             margin: 3rem 0;
-            
+            width: 75vw;
         }
         // heading About
         &--about{
@@ -383,7 +383,7 @@ a{
 
                 @media screen and (min-width:900px) {
                     font-size: 2.255rem;
-                    width: 1300px;
+                    // width: 1300px;
                     padding: 0 0.5em;
                 }
             }
@@ -402,13 +402,17 @@ a{
 
         @media screen and (min-width:900px) {
             margin: 0;
-            width: 1300px;
+            width: 85vw;
+            align-items: flex-start;
         }
-
+        
         &--heading{
             color: $red;
+            @media screen and (min-width:900px) {
+                margin: 0 7rem;
+            }
         }
-
+        
         // capa container
         .capa__container{
             display: flex;
@@ -418,11 +422,13 @@ a{
             opacity: 0;
             transform: scale(0.85);
             transition: all 0.7s ease-in-out;
-
+            
             @media screen and (min-width:900px) {
                 flex-direction: row-reverse;
+                width: 100%;
                 justify-content: space-around;
-                gap: 15rem;
+                align-items: center;
+                // gap: 15rem;
                 
             }
 
@@ -431,7 +437,7 @@ a{
             .capa__container-img{
                 width: 250px;
                 @media screen and (min-width:900px) {
-                    width: 400px;
+                    width: 350px;
                 }
                 &--system{
                     padding: 0 1em;
@@ -445,7 +451,11 @@ a{
                 display: flex;
                 flex-direction: column;
                 gap: 3.5rem;
-    
+
+                @media screen and (min-width:900px) {
+                    margin: 0 6rem;
+                }
+
                 // title of web design
                 &--design{
                     color: $green;
@@ -537,3 +547,236 @@ a{
         transform: scale(1);
     }
 }
+
+
+
+// work
+.work{
+    background-color: white;
+    color: black;
+    margin: 3rem 0;
+    padding: 3rem 0;
+    
+    @media screen and (min-width:900px) {
+        position: relative;
+        margin: 0;
+        padding: 0 0 5rem 0;
+    }
+
+    // work heading
+
+    .work-heading{
+        width: 100%;
+        text-align: center;
+        font-family: $josfin;
+        font-size: 3.5rem;
+        color: $pink;
+        font-weight: bolder;
+        font-style: italic;
+
+        @media screen and (min-width:900px) {
+            font-size: 6rem;  
+            padding: 1em 0; 
+        }
+    }
+
+    // container of work
+
+    .work-work{
+        display: flex;
+        flex-direction: column;
+        margin: 5rem 1.5rem;
+
+        @media screen and (min-width:900px) {
+            width: 67.88vw;
+            align-items: center;    
+            margin: 15rem 0;
+        }
+        
+        // container of work
+        .work-container{
+            display: flex;
+            flex-direction: column;
+            gap: 5rem;
+
+            @media screen and (min-width:900px) {
+                gap: 10rem;
+            }
+
+            // work boxes contain 2 images each
+
+            .work-content{
+                display: flex;
+                gap: 5rem;
+                flex-direction: column;
+
+                @media screen and (min-width:900px) {
+                    flex-direction: column;
+                }
+
+                // hiding all the images and text for animation
+
+                .work__container-meet-chat{
+                    opacity: 0;
+                    transform: scale(0.85);
+                    transition: all 0.6s ease-in-out;
+                }
+                .work__container-cursor{
+                    opacity: 0;
+                    transform: scale(0.85);
+                    transition: all 0.6s ease-in-out;
+                }
+                .work__container-jack{
+                    opacity: 0;
+                    transform: scale(0.85);
+                    transition: all 0.6s ease-in-out;
+                }
+                .work__container-gym{
+                    opacity: 0;
+                    transform: scale(0.85);
+                    transition: all 0.6s ease-in-out;
+                }
+                .work__container-playing{
+                    opacity: 0;
+                    transform: scale(0.85);
+                    transition: all 0.6s ease-in-out;
+                }
+                .work__container-drum{
+                    opacity: 0;
+                    transform: scale(0.85);
+                    transition: all 0.6s ease-in-out;
+                }
+                .work__container-rock{
+                    opacity: 0;
+                    transform: scale(0.85);
+                    transition: all 0.6s ease-in-out;
+                }
+                .work__container-home{
+                    opacity: 0;
+                    transform: scale(0.85);
+                    transition: all 0.6s ease-in-out;
+                }
+
+                // showing the images
+                .work__container-meet-chat.appear{
+                    transform: scale(1);
+                    opacity: 1;
+                }
+                .work__container-cursor.appear{
+                    opacity: 1;
+                    transform: scale(1);
+                }
+                .work__container-jack.appear{
+                    opacity: 1;
+                    transform: scale(1);
+                }
+                .work__container-gym.appear{
+                    opacity: 1;
+                    transform: scale(1);
+                }
+                .work__container-playing.appear{
+                    opacity: 1;
+                    transform: scale(1);
+                }
+                .work__container-drum.appear{
+                    opacity: 1;
+                    transform: scale(1);
+                }
+                .work__container-rock.appear{
+                    opacity: 1;
+                    transform: scale(1);
+                }
+                .work__container-home.appear{
+                    opacity: 1;
+                    transform: scale(1);
+                }
+                .work-container-content{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1rem;
+                    font-family: $inconsolata;
+                    font-size: 1.77rem;
+
+                    @media screen and (min-width:900px) {
+                        // gap: 2rem;
+                        font-size: 3rem;
+                    }
+                    
+                }
+
+                .work-container-content-end{
+                    display: flex;
+                    flex-direction: column-reverse;
+                    align-items: flex-end;
+                    
+                    @media screen and (min-width:900px) {
+                        align-items: flex-start;
+                        position: relative;
+                        top: -210px;
+                        left: 55%;
+                    }
+                }
+
+            }
+
+        }
+    }
+
+
+    // images in work section
+    .work__container_images{
+        width: 200px;
+        cursor: pointer;
+        @media screen and (min-width:900px) {
+            width: 800px;
+        }
+        // @media screen and (max-width:1560px) {
+        //     width: 750px;
+        // }
+        
+        // @media screen and (min-width:1560px) {
+        //     width: 950px;
+        // }
+
+
+        .work-container-img{
+            width: 100%;
+            display: block;
+            object-fit: cover;
+            // border: 5px solid rgb(206, 20, 20);
+            box-shadow: 1px 1px 5px 1px gray;
+        }
+    }
+    
+    // see more button
+
+    .work__more{
+        @include flex(flex, center, center);
+        
+        @media screen and (min-width:900px) {
+            position: absolute;
+            bottom: 3%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+        .work__more--see{
+            background-color: black;
+            color: white;
+            padding: 0.5em 1em;
+            border: 0;
+            border-radius: 4px;
+            box-shadow: 1px 1px 5px 0px $green,
+                        -1px -1px 5px 0px $purple;
+
+            @media screen and (min-width:900px) {
+                padding: 1em 2.5em;
+            }
+        }
+    }
+    
+}
+// .rd{
+//     height: 100vh;
+//     background-color: $purple;
+//     margin: -25rem 0;
+// }
