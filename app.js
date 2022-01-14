@@ -18,6 +18,12 @@ const cursor = document.getElementById('cursor');
 const jacpiro = document.getElementById('jackpiro');
 const gym = document.getElementById('gym');
 
+// form validation variables
+
+const form = document.getElementById('form');
+const firstName = document.getElementById('first')
+const lastName = document.getElementById('last')
+const email = document.getElementById('email')
 
 // making hamburger
 menu.addEventListener('click',()=>{
@@ -126,3 +132,67 @@ rps.addEventListener('click',()=>{
 gym.addEventListener('click',()=>{
     window.open('https://ykverma99.github.io/Gym/')
 })
+
+
+// form validation 
+form.addEventListener('submit', e =>{
+    e.preventDefault();
+
+    validateForm();
+})
+
+// function for showing error
+
+const setError = (element,message) =>{
+    const inputController = element.parentElement;
+    const error = inputController.querySelector('.error')
+    
+    error.innerText = message;
+}
+
+// function for succes
+const setSucess = (element) =>{
+    const inputController = element.parentElement;
+    const error = inputController.querySelector('.error')
+    
+    error.innerText = ' ';
+}
+
+// regular expression function for email
+const isEmail = email => {
+    const re = /[A-Z a-z ._0-9]{3,}[@][A-Z a-z]{3,5}[.][A-z a-z]{2,6}/;
+    return re.test(String(email).toLowerCase)
+}
+
+// function to check the form is valid or not
+const validateForm = ()=>{
+
+    // trim all the value so they dont include the space
+    const firstNameValue = firstName.value.trim();
+    const lastNameValue = lastName.value.trim();
+    const emailValue = email.value.trim();
+    // check firstname 
+
+    if(firstNameValue === ''){
+        setError(firstName, 'Please fill the first name');
+    }else{
+        setSucess(firstName);
+    }
+
+    if(lastNameValue === ''){
+        setError(lastName, 'Please fill the last name');
+    }else{
+        setSucess(lastName);
+    }
+
+    if(!isEmail(emailValue)){
+        setError(email, 'Please enter the correct email')
+    }else if(emailValue === ''){
+        setError(email, 'Please fill the email')
+    }else{
+        setSucess(email);
+    }
+}
+
+
+

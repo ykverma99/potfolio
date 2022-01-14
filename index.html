@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>portfolio</title>
     <link
       rel="shortcut icon"
       href="./images/logo_for-porfolio.svg"
@@ -45,7 +45,7 @@
             <!-- pages in website -->
             <a href="#aboutpage" class="nav__rght-container--about nav-link">About</a>
             <a href="#work" class="nav__rght-container--work nav-link">Work</a>
-            <a href="#" class="nav__rght-container--contact nav-link">Contact</a>
+            <a href="#footer" class="nav__rght-container--contact nav-link">Contact</a>
             <!-- toggle button for changing color of website -->
             <div class="nav__rght-container__change">
                 <input type="checkbox" id="checkbox" name="checkbox">
@@ -283,7 +283,55 @@
           </div>
         </article>
 
-        <div class="rd"></div>
+        <!-- contact section -->
+        <footer class="contact" id="footer">
+
+          <!-- contact container of para's -->
+          <div class="contact__cont">
+            <h3 class="contact__cont--title">Do you Want a new website that looks goods <br> and convert well?</h3>
+            <p class="contact__cont--para">If you have a project in mind or simply intrested in finding <br> out or more please fill the form and lers get things moving</p>
+          </div>
+
+          <!-- form container -->
+          <div class="contact__form_container">
+
+            <!-- image in form section -->
+            <div class="contact__form_img">
+              <img src="./images/undraw_agreement_re_d4dv.svg" alt="Meeting" id="form-img" class="contact__form--image">
+            </div>
+
+            <!-- form section -->
+            <form action="/" method="get" id="form" class="contact__form">
+              <div class="contact__form_name">
+                <div class="contact__form_first contact__form_error-box">
+                  <input type="text" name="firstname" class="contact__form-input" id="first" placeholder="Firsst Name">
+                  <small class="error"></small>
+                </div>
+                <div class="contact__form_last contact__form_error-box">
+                  <input type="text" name="lastname" class="contact__form-input" id="last" placeholder="Last Name">
+                  <small class="error"></small>
+                </div>
+              </div>
+              <div class="contact__form_email contact__form_error-box">
+                <input type="email" name="email" class="contact__form-input" id="email" placeholder="Email">
+                <small class="error"></small>
+              </div>
+              <div class="contact__form_box">
+                <textarea name="messeage" id="messeage" class="contact__form--text-area" cols="30" rows="10" placeholder="message"></textarea>  
+              </div>
+              <div class="contact__form_button">
+                <button class="contact__form--button" type="submit">Submit</button>
+              </div>
+            </form>
+
+            <!-- email -->
+
+          </div>
+          <div class="contact__meet">
+            <h2 class="contact__meet--title">For everything else, you can email to</h2>
+            <h3 class="contact__meet--email">1.yogeshwarkhurmi@gmail.com</h3>
+          </div>
+        </footer>
       </main>
     </div>
     <script src="./app.js"></script>
